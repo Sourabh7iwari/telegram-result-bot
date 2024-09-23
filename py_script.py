@@ -52,7 +52,7 @@ def fetch_result(input):
     else:
         return("Invalid enrollment number")
 
-    if enrollment_no==os.getenv("OWNER"):
+    if enrollment_no==int(os.getenv("OWNER")):
         return("Vo Stree Kal Ana")
     
     url = f"https://gradecard.ignou.ac.in/gradecard/view_gradecard.aspx?eno={enrollment_no}&prog=BCA&type=1"
