@@ -35,6 +35,19 @@ def format_result(result_data):
 
 # Function to scrape IGNOU result by enrollment number
 def fetch_result(enrollment_no):
+    dic = os.getenv("MY_DICT")
+    
+    try:
+        dictt = ast.literal_eval(dic)
+    except :
+        return("Error parsing the dictionary")
+    
+    
+    if input.upper() in dictt.keys():
+        enrollment_no=dictt[input.upper()]
+    else:
+        enrollment_no=int(input)
+
     url = f"https://gradecard.ignou.ac.in/gradecard/view_gradecard.aspx?eno={enrollment_no}&prog=BCA&type=1"
 
     response = requests.get(url)
