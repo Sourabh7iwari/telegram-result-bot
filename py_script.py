@@ -34,7 +34,7 @@ def format_result(result_data):
 
 
 # Function to scrape IGNOU result by enrollment number
-def fetch_result(enrollment_no):
+def fetch_result(input):
     dic = os.getenv("MY_DICT")
     
     try:
