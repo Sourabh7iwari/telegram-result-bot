@@ -45,8 +45,10 @@ def fetch_result(input):
     
     if input.upper() in dictt.keys():
         enrollment_no=dictt[input.upper()]
-    else:
+    elif input.isdigit():
         enrollment_no=int(input)
+    else:
+        return("Invalid enrollment number")
 
     url = f"https://gradecard.ignou.ac.in/gradecard/view_gradecard.aspx?eno={enrollment_no}&prog=BCA&type=1"
 
