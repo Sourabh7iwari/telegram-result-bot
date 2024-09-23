@@ -92,7 +92,7 @@ def fetch_result(input):
 
 # Command handler for /start
 async def start(update: Update, context):
-    await update.message.reply_text("Welcome! Please enter your enrollment number to get your IGNOU result.")
+    await update.message.reply_text("Welcome! Please enter your enrollment number to get your IGNOU result.\nif you are delhi RC3 student and batch of 2021, you can enter your full name to get result")
 
 # Function to handle user input (enrollment number)
 async def handle_input(update: Update, context):
