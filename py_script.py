@@ -47,6 +47,8 @@ def fetch_result(input):
         enrollment_no=dictt[input.upper()]
     elif input.isdigit():
         enrollment_no=int(input)
+    elif enrollment_no==210688918:
+        return "vo stree kal ana"
     else:
         return("Invalid enrollment number")
 
@@ -83,7 +85,7 @@ def fetch_result(input):
                     })
             return format_result(result_data)
         else:
-            return "Enrollment  number not found"
+            return "result not found"
     else:
         return " Try again later."
       
